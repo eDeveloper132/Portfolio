@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Muhammad Ilyas — eDeveloper132 — Portfolio</title>
+  <style>
+    :root{--bg:#f3f4f6;--card:#fff;--accent:#f6c90e;--text:#111827}
+    [data-theme="dark"]{--bg:#0b1220;--card:#0f1724;--accent:#f6c90e;--text:#e6eef8}
+    *{box-sizing:border-box}
+    body{font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Arial;line-height:1.4;margin:0;background:var(--bg);color:var(--text)}
+    .container{max-width:1100px;margin:28px auto;padding:18px}
+    .card{background:var(--card);border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.08);padding:18px}
+    header{display:flex;gap:18px;align-items:center}
+    .avatar{width:110px;height:110px;border-radius:999px;overflow:hidden;flex-shrink:0}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    h1{margin:0;font-size:22px}
+    .subtitle{color:gray;font-size:13px;margin-top:4px}
+    .controls{margin-left:auto;display:flex;gap:8px}
+    .btn{background:#111827;color:#fff;border:none;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:13px}
+    .btn.alt{background:transparent;color:var(--text);border:1px solid rgba(0,0,0,0.08)}
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:18px;margin-top:18px}
+    .section{margin-bottom:12px}
+    h2{font-size:18px;margin:6px 0}
+    p small{color:gray}
+    .list{padding-left:18px}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .project{border-radius:10px;padding:12px;background:linear-gradient(180deg,rgba(0,0,0,0.02),transparent)}
+    footer{margin-top:18px;text-align:center;color:gray;font-size:13px}
+    .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .badge{display:inline-block;padding:6px 8px;border-radius:999px;background:rgba(0,0,0,0.06);font-size:12px}
+    input[type="text"],textarea{width:100%;padding:8px;border-radius:8px;border:1px solid #d1d5db}
+    .muted{color:gray;font-size:13px}
+    .note{font-size:13px;color:#6b7280;margin-top:8px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}.controls{display:none}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header>
+        <div class="avatar"><img src="./pic.jpg" alt="Muhammad Ilyas" id="profileImage"></div>
+        <div>
+          <h1>Muhammad Ilyas <span class="badge">eDeveloper132</span></h1>
+          <div class="subtitle">Full-Stack Web Developer & AI Enthusiast — Karachi, Pakistan</div>
+          <div style="margin-top:8px;font-size:13px">Tech: React / Next.js • Tailwind • Node.js • MongoDB • Express • Dialogflow • Flowise • Hugging Face • OpenAI</div>
+        </div>
+        <div class="controls">
+          <button class="btn" id="printBtn">Download (Print / PDF)</button>
+          <button class="btn alt" id="downloadJsonBtn">Download JSON</button>
+          <button class="btn" id="shareBtn">Share</button>
+          <button class="btn alt" id="copyEmailBtn">Copy Email</button>
+          <button class="btn alt" id="openLinkedinBtn">Open LinkedIn</button>
+          <button class="btn" id="copyLinkedinBtn">Copy LinkedIn</button>
+        </div>
+      </header>
+
+      <div class="grid">
+        <main>
+          <section class="card section">
+            <h2>Profile Summary</h2>
+            <p id="profileSummary">Karachi-based developer focused on React/Next.js, Tailwind, Node.js, MongoDB, and AI/chatbot tools (Dialogflow, Flowise, HuggingFace, OpenAI/GPT, Google Gemini). Emphasis on collaboration and production-ready code.</p>
+
+            <div class="actions">
+              <button class="btn" id="downloadHtmlBtn">Download HTML</button>
+              <button class="btn  alt" id="exportCsvBtn">Export Projects CSV</button>
+              <button class="btn" id="toggleThemeBtn">Toggle Dark</button>
+            </div>
+          </section>
+
+          <section class="card section">
+            <h2>Work Experience</h2>
+            <ul class="list">
+              <li><strong>WP Coders (PVT) LTD</strong> — 3-month internship / current employer (remote)</li>
+              <li><strong>Freelance</strong> — Client projects (e.g., Clicksend SMS Service with MongoDB auth)</li>
+            </ul>
+          </section>
+
+          <section class="card section">
+            <h2>Key Projects</h2>
+            <div class="projects" id="projectsList">
+              <div class="project">
+                <strong>LuxuryStay</strong>
+                <div class="subtitle">Hotel management system (TypeScript, Express, MongoDB)</div>
+                <div style="margin-top:8px"><a href="https://github.com/eDeveloper132/LuxuryStay" target="_blank" rel="noreferrer">GitHub →</a></div>
+              </div>
+
+              <div class="project">
+                <strong>TheFishBasket</strong>
+                <div class="subtitle">Management platform for local ISP (frontend & backend)</div>
+                <div style="margin-top:8px"><a href="https://github.com/eDeveloper132/TheFishBasket-Backend" target="_blank" rel="noreferrer">GitHub →</a></div>
+              </div>
+
+              <div class="project">
+                <strong>Clicksend_SMS_Service</strong>
+                <div class="subtitle">Client SMS integration with auth (MongoDB)</div>
+                <div style="margin-top:8px"><a href="https://github.com/eDeveloper132/Clicksend_SMS_Service" target="_blank" rel="noreferrer">GitHub →</a></div>
+              </div>
+
+              <div class="project">
+                <strong>BabyShopHub</strong>
+                <div class="subtitle">Demo e-commerce app (Flutter/Dart)</div>
+                <div style="margin-top:8px"><a href="https://github.com/eDeveloper132/BabyShopHub" target="_blank" rel="noreferrer">GitHub →</a></div>
+              </div>
+
+            </div>
+          </section>
+
+          <section class="card section">
+            <h2>Skills & Technologies</h2>
+            <p>Frontend: HTML5, CSS3, Tailwind, React/Next.js (JS/TS). Backend: Node.js, Express, PHP, MySQL, MongoDB. AI/Chatbots: Dialogflow, Flowise, HuggingFace, OpenAI APIs, Google Gemini.</p>
+          </section>
+
+          <section class="card section">
+            <h2>Open Source & Community</h2>
+            <p>Active GitHub contributor with many practice and learning projects. Forked/experimented with Flowise and participated in hackathons under Governor Sindh IT initiatives.</p>
+          </section>
+
+          <!-- LinkedIn Analysis Block -->
+          <section class="card section" id="linkedinAnalysisBlock">
+            <h2>LinkedIn Profile (provided)</h2>
+            <p class="muted">LinkedIn URL provided: <a href="https://www.linkedin.com/in/muhammad-ilyas-edeveloper-0554b3268/" target="_blank" rel="noreferrer">https://www.linkedin.com/in/muhammad-ilyas-edeveloper-0554b3268/</a></p>
+
+            <p class="note"><strong>Important:</strong> I attempted to fetch the LinkedIn page automatically but LinkedIn blocks automated access (robots.txt). I could not read the profile programmatically. The analysis below is therefore a <em>best-effort summary</em> based on the GitHub profile, repo descriptions, and the information already in this portfolio. Please open the LinkedIn link above to verify or to copy any extra details you want displayed.</p>
+
+            <h3 style="margin-top:10px">Best-effort analysis summary</h3>
+            <ul class="list">
+              <li><strong>Profile owner:</strong> Muhammad Ilyas (aka <code>eDeveloper132</code>), Karachi-based software engineering student and developer.</li>
+              <li><strong>Likely headline:</strong> Full-Stack Web Developer & AI Enthusiast (matches GitHub / portfolio descriptions).</li>
+              <li><strong>Likely current role:</strong> WP Coders (PVT) LTD — internship / remote affiliation (stated on GitHub).</li>
+              <li><strong>Education shown elsewhere:</strong> SZABIST (B.S. Software Engineering), Aptech, Saylani CLC — likely present on LinkedIn.</li>
+              <li><strong>Key projects to verify on LinkedIn:</strong> LuxuryStay, TheFishBasket, Clicksend_SMS_Service, BabyShopHub (these appear in GitHub repos).</li>
+              <li><strong>Recommendations/testimonials:</strong> None were found in public GitHub data; confirm on LinkedIn if there are recommendations or endorsements.</li>
+            </ul>
+
+            <p class="note">If you want me to extract and insert exact LinkedIn text (headline, experience bullets, skills, endorsements), please either (1) share the text you want copied here, or (2) allow manual copy/paste of the LinkedIn content into this chat so I can parse and insert it. Automated scraping of LinkedIn is blocked.</p>
+          </section>
+
+          <section class="card section">
+            <h2>Contact</h2>
+            <p>Email: <span id="email">1375219.aptechiic@gmail.com</span> &nbsp; • &nbsp; Location: Pakistan</p>
+            <p><a href="mailto:1375219.aptechiic@gmail.com" class="btn">Say Hello</a> <a href="https://github.com/eDeveloper132" target="_blank" class="btn alt" rel="noreferrer">GitHub</a> <a href="https://www.linkedin.com/in/muhammad-ilyas-edeveloper-0554b3268/" target="_blank" class="btn alt" rel="noreferrer">LinkedIn</a></p>
+
+            <h3 style="margin-top:12px">Quick Message</h3>
+            <textarea id="message" rows="4" placeholder="Write a short message..."></textarea>
+            <div style="margin-top:8px;display:flex;gap:8px">
+              <button class="btn" id="sendMailBtn">Send via Email</button>
+              <button class="btn alt" id="downloadResumeTxt">Download Resume (TXT)</button>
+            </div>
+          </section>
+
+        </main>
+
+        <aside>
+          <div class="card section">
+            <h2>Education</h2>
+            <ul class="list">
+              <li>SZABIST University — B.S. Software Engineering (ongoing)</li>
+              <li>Aptech Computer Education — 3-year programming certification</li>
+              <li>Saylani CLC — AI & Chatbot Development course</li>
+              <li>Gov. Sindh IT Initiative — advanced courses (AI, Web3)</li>
+            </ul>
+          </div>
+
+          <div class="card section">
+            <h2>Online Presence</h2>
+            <p><a href="https://github.com/eDeveloper132" target="_blank" rel="noreferrer">GitHub: @eDeveloper132</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/muhammad-ilyas-edeveloper-0554b3268/" target="_blank" rel="noreferrer">/in/muhammad-ilyas-edeveloper-0554b3268/</a></p>
+            <p>No formal personal website found (as of 2025). Instagram used for milestones.</p>
+          </div>
+
+          <div class="card section">
+            <h2>Extras</h2>
+            <p class="subtitle">Tools</p>
+            <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px">
+              <button class="btn" id="downloadCsvBtn">Download Projects CSV</button>
+              <button class="btn alt" id="copyProfileBtn">Copy Profile JSON</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <footer class="card">
+        <small>Profile generated from research sources (primary: GitHub) — LinkedIn URL included as provided.</small>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    // Profile data used for export and downloads
+    const profileData = {
+      name: "Muhammad Ilyas",
+      handle: "eDeveloper132",
+      location: "Karachi, Pakistan",
+      title: "Full-Stack Web Developer & AI Enthusiast",
+      email: "1375219.aptechiic@gmail.com",
+      linkedin: "https://www.linkedin.com/in/muhammad-ilyas-edeveloper-0554b3268/",
+      tech: ["React","Next.js","Tailwind","Node.js","MongoDB","Express","Dialogflow","Flowise","HuggingFace","OpenAI"],
+      experience: [
+        {company: "WP Coders (PVT) LTD", role: "Intern / Developer", notes: "3-month internship / current employer (remote)"},
+        {company: "Freelance", role: "Developer", notes: "Client projects including Clicksend SMS Service"}
+      ],
+      projects: [
+        {name: "LuxuryStay", desc: "Hotel management system (TypeScript, Express, MongoDB)", url: "https://github.com/eDeveloper132/LuxuryStay"},
+        {name: "TheFishBasket", desc: "Management platform for local ISP", url: "https://github.com/eDeveloper132/TheFishBasket-Backend"},
+        {name: "Clicksend_SMS_Service", desc: "Client SMS integration with auth (MongoDB)", url: "https://github.com/eDeveloper132/Clicksend_SMS_Service"},
+        {name: "BabyShopHub", desc: "Demo e-commerce app (Flutter/Dart)", url: "https://github.com/eDeveloper132/BabyShopHub"}
+      ],
+      education: ["SZABIST University - B.S. Software Engineering (ongoing)","Aptech Computer Education - 3-year program","Saylani CLC - AI & Chatbot course","Gov. Sindh IT Initiative - advanced courses"]
+    };
+
+    // Utility: trigger download
+    function download(filename, content, type='application/octet-stream'){
+      const blob = new Blob([content], {type});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = filename; document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(()=>URL.revokeObjectURL(url),5000);
+    }
+
+    // Print / Save as PDF
+    document.getElementById('printBtn').addEventListener('click', ()=>{
+      window.print();
+    });
+
+    // Download JSON
+    document.getElementById('downloadJsonBtn').addEventListener('click', ()=>{
+      download('edeveloper132-profile.json', JSON.stringify(profileData, null, 2), 'application/json');
+    });
+
+    // Download HTML snapshot of the profile
+    document.getElementById('downloadHtmlBtn').addEventListener('click', ()=>{
+      download('edeveloper132-portfolio.html', '<!doctype html>\n'+document.documentElement.outerHTML, 'text/html');
+    });
+
+    // Share profile using Web Share API or fallback copy
+    document.getElementById('shareBtn').addEventListener('click', async ()=>{
+      const shareData = {title: profileData.name, text: profileData.title, url: location.href};
+      if(navigator.share){
+        try{ await navigator.share(shareData); } catch(e){ alert('Share canceled or not available.'); }
+      } else {
+        try{ await navigator.clipboard.writeText(location.href); alert('Profile URL copied to clipboard'); } catch(e){ prompt('Copy this URL', location.href); }
+      }
+    });
+
+    // Copy email
+    document.getElementById('copyEmailBtn').addEventListener('click', async ()=>{
+      try{ await navigator.clipboard.writeText(profileData.email); alert('Email copied to clipboard'); } catch(e){ prompt('Copy email', profileData.email); }
+    });
+
+    // Open LinkedIn (in new tab)
+    document.getElementById('openLinkedinBtn').addEventListener('click', ()=>{
+      window.open(profileData.linkedin, '_blank', 'noopener');
+    });
+
+    // Copy LinkedIn URL
+    document.getElementById('copyLinkedinBtn').addEventListener('click', async ()=>{
+      try{ await navigator.clipboard.writeText(profileData.linkedin); alert('LinkedIn URL copied to clipboard'); } catch(e){ prompt('Copy LinkedIn URL', profileData.linkedin); }
+    });
+
+    // Export projects as CSV
+    document.getElementById('exportCsvBtn').addEventListener('click', ()=>{
+      const rows = [['name','description','url']];
+      profileData.projects.forEach(p=>rows.push([p.name, p.desc, p.url]));
+      const csv = rows.map(r=>r.map(c=>`"${(''+c).replace(/"/g,'""')}"`).join(',')).join('\n');
+      download('projects.csv', csv, 'text/csv');
+    });
+
+    // Download Projects CSV (alternate button)
+    document.getElementById('downloadCsvBtn').addEventListener('click', ()=>{
+      document.getElementById('exportCsvBtn').click();
+    });
+
+    // Copy profile JSON to clipboard
+    document.getElementById('copyProfileBtn').addEventListener('click', async ()=>{
+      try{ await navigator.clipboard.writeText(JSON.stringify(profileData)); alert('Profile JSON copied to clipboard'); }catch(e){ prompt('Copy JSON', JSON.stringify(profileData)); }
+    });
+
+    // Send message via email (mailto)
+    document.getElementById('sendMailBtn').addEventListener('click', ()=>{
+      const msg = document.getElementById('message').value || 'Hello — I am interested in your services.';
+      const mailto = `mailto:${profileData.email}?subject=${encodeURIComponent('Project inquiry')}&body=${encodeURIComponent(msg)}`;
+      window.location.href = mailto;
+    });
+
+    // Download resume as plain text
+    document.getElementById('downloadResumeTxt').addEventListener('click', ()=>{
+      const resume = `Name: ${profileData.name}\nTitle: ${profileData.title}\nEmail: ${profileData.email}\nLinkedIn: ${profileData.linkedin}\n\nSummary:\n${document.getElementById('profileSummary').innerText}\n\nExperience:\n` + profileData.experience.map(e=>`- ${e.company} — ${e.role}: ${e.notes}`).join('\n') + '\n\nEducation:\n' + profileData.education.join('\n');
+      download('resume.txt', resume, 'text/plain');
+    });
+
+    // Toggle theme
+    document.getElementById('toggleThemeBtn').addEventListener('click', ()=>{
+      const root = document.documentElement;
+      if(root.getAttribute('data-theme')==='dark'){ root.removeAttribute('data-theme'); } else { root.setAttribute('data-theme','dark'); }
+    });
+
+    // Initialize dynamic project list (if needed later)
+    function renderProjects(){
+      const wrap = document.getElementById('projectsList');
+      wrap.innerHTML = '';
+      profileData.projects.forEach(p=>{
+        const div = document.createElement('div'); div.className = 'project';
+        div.innerHTML = `<strong>${p.name}</strong><div class='subtitle'>${p.desc}</div><div style='margin-top:8px'><a href='${p.url}' target='_blank' rel='noreferrer'>GitHub →</a></div>`;
+        wrap.appendChild(div);
+      });
+    }
+    renderProjects();
+  </script>
+</body>
+</html>
